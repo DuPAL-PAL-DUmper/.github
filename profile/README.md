@@ -1,1 +1,50 @@
-## DuPAL
+# DuPAL
+
+Here You'll find all the repositories related to my work on the various incarnations of the DuPAL devices, the tools I use to analyze and reverse old PLD devices.
+
+## DuPAL V3, aka "dupico"
+
+The dupico is the new incarnation of the DuPAL, based on the Raspberry Pico. It's a much more flexible device in respect to the previous incarnation, and can act as a dumper for other types of devices.
+
+Development is currently carried on on the dupico only, and the other incarnations are considered legacy.
+
+## Repositories
+
+## Limitations
+
+I plan to write a proper document on this, but keep in mind that analyzing PLD devices with registered outputs (based on flip-flops) and especially devices making use of feedbacks is an arduous task. DuPAL helps, but is no silver bullet.
+
+Feedbacks are especially problematic because they generate intermediate states that cannot be detected by the dupico (and maybe can just be guessed by continuous sampling of the outputs of the PLD device) and thus cannot be recovered by automatic analysis.
+
+An example is the following. Consider these logic equations:
+
+```
+/o18 = i1
+/o17 = /i1 * /o18 + /o17 * i2
+```
+
+`o17` and `o18` act as feedbacks, so they are both outputs and inputs to the equations, and, as inputs, are not under direct user control.
+
+The following is a partial truth table for these equations:
+
+| i2 | i1 | o18 | o17 |   | o18 | o17 |
+| -- | -- | --- | --- | - | --- | --- |
+|  **0** |  **0** |  0  |  0  |   |  1  |  0  |
+|  0 |  1 |  0  |  0  |   |  0  |  1  |
+|  1 |  0 |  0  |  0  |   |  1  |  0  |
+|  1 |  1 |  0  |  0  |   |  0  |  0  |
+|  **0** |  **0** |  1  |  0  |   |  1  |  1  |
+|  0 |  1 |  1  |  0  |   |  0  |  1  |
+|  1 |  0 |  1  |  0  |   |  1  |  0  |
+|  1 |  1 |  1  |  0  |   |  0  |  0  |
+|  **0** |  **0** |  1  |  1  |   |  1  |  1  |
+|  0 |  1 |  1  |  1  |   |  0  |  1  |
+|  1 |  0 |  1  |  1  |   |  1  |  1  |
+|  1 |  1 |  1  |  1  |   |  0  |  1  |
+
+Imagine starting in state `00` (so both `o18` and `o17` at 0), and setting the two inputs `i1` and `i2` at 0.
+Following the truth table you will see that You'll immediately switch to state `10` (`o18` high, and `o17` low),
+but state `10` with input `00` is not stable: following the truth table again, we see that we will switch to state `11` immediately, 
+and we will stop here.
+
+State `10` is an intermediate state, and is not captured by sampling the outputs at a low frequency.
