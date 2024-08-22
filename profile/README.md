@@ -11,6 +11,7 @@ Development is currently carried on on the dupico only, and the other incarnatio
 ## Repositories
 
 - [DuPAL_Board](https://github.com/DuPAL-PAL-DUmper/DuPAL_Board), here You'll find schematics and gerbers for the various incarnations of DuPAL boards and accessories
+- [dupico_firmware](https://github.com/DuPAL-PAL-DUmper/dupico_firmware), firmware for the dupico board
 - [PAL_samples](https://github.com/DuPAL-PAL-DUmper/PAL_samples), repository with some PAL examples I use for experiments
 - [dpdumper](https://github.com/DuPAL-PAL-DUmper/dpdumper), tool to dump simple combinatorial devices (e.g. old PALs, but also ROMs)
 - [dppeeper](https://github.com/DuPAL-PAL-DUmper/dppeeper), tool for visual and interactive analysis of a PLD
