@@ -10,6 +10,13 @@ Development is currently carried on on the dupico only, and the other incarnatio
 
 ## Repositories
 
+- [DuPAL_Board](https://github.com/DuPAL-PAL-DUmper/DuPAL_Board), here You'll find schematics and gerbers for the various incarnations of DuPAL boards and accessories
+- [PAL_samples](https://github.com/DuPAL-PAL-DUmper/PAL_samples), repository with some PAL examples I use for experiments
+- [dpdumper](https://github.com/DuPAL-PAL-DUmper/dpdumper), tool to dump simple combinatorial devices (e.g. old PALs, but also ROMs)
+- [dppeeper](https://github.com/DuPAL-PAL-DUmper/dppeeper), tool for visual and interactive analysis of a PLD
+- [dupicolib](https://github.com/DuPAL-PAL-DUmper/dupicolib), library for hardware interfacing with the dupico board, required by the above projects
+- [dpdumperlib](https://github.com/DuPAL-PAL-DUmper/dpdumperlib), library with shared code used by the dpdumper and other projects
+
 ## Limitations
 
 I plan to write a proper document on this, but keep in mind that analyzing PLD devices with registered outputs (based on flip-flops) and especially devices making use of feedbacks is an arduous task. DuPAL helps, but is no silver bullet.
