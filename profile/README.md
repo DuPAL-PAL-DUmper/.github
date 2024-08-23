@@ -14,6 +14,7 @@ Development is currently carried on on the dupico only, and the other incarnatio
 - [dupico_firmware](https://github.com/DuPAL-PAL-DUmper/dupico_firmware), firmware for the dupico board
 - [PAL_samples](https://github.com/DuPAL-PAL-DUmper/PAL_samples), repository with some PAL examples I use for experiments
 - [dpdumper](https://github.com/DuPAL-PAL-DUmper/dpdumper), tool to dump simple combinatorial devices (e.g. old PALs, but also ROMs)
+- [dpdump2tab](https://github.com/DuPAL-PAL-DUmper/dpdump2tab), tool to convert dumps from purely combinatorial devices made with dpdumper into truth tables compatible with `espresso`
 - [dppeeper](https://github.com/DuPAL-PAL-DUmper/dppeeper), tool for visual and interactive analysis of a PLD
 - [dupicolib](https://github.com/DuPAL-PAL-DUmper/dupicolib), library for hardware interfacing with the dupico board, required by the above projects
 - [dpdumperlib](https://github.com/DuPAL-PAL-DUmper/dpdumperlib), library with shared code used by the dpdumper and other projects
