@@ -35,20 +35,20 @@ An example is the following. Consider these logic equations:
 
 The following is a partial truth table for these equations:
 
-| i2 | i1 | o18 | o17 |   | o18 | o17 |
-| -- | -- | --- | --- | - | --- | --- |
-|  **0** |  **0** |  0  |  0  |   |  1  |  0  |
-|  0 |  1 |  0  |  0  |   |  0  |  1  |
-|  1 |  0 |  0  |  0  |   |  1  |  0  |
-|  1 |  1 |  0  |  0  |   |  0  |  0  |
-|  **0** |  **0** |  1  |  0  |   |  1  |  1  |
-|  0 |  1 |  1  |  0  |   |  0  |  1  |
-|  1 |  0 |  1  |  0  |   |  1  |  0  |
-|  1 |  1 |  1  |  0  |   |  0  |  0  |
-|  **0** |  **0** |  1  |  1  |   |  1  |  1  |
-|  0 |  1 |  1  |  1  |   |  0  |  1  |
-|  1 |  0 |  1  |  1  |   |  1  |  1  |
-|  1 |  1 |  1  |  1  |   |  0  |  1  |
+| i2 | i1 | o18 | o17 | ->  | o18 | o17 |
+| -- | -- | --- | --- | --- | --- | --- |
+|  0 |  0 |  0  |  0  |     |  1  |  0  |
+|  0 |  1 |  0  |  0  |     |  0  |  1  |
+|  1 |  0 |  0  |  0  |     |  1  |  0  |
+|  1 |  1 |  0  |  0  |     |  0  |  0  |
+|  0 |  0 |  1  |  0  |     |  1  |  1  |
+|  0 |  1 |  1  |  0  |     |  0  |  1  |
+|  1 |  0 |  1  |  0  |     |  1  |  0  |
+|  1 |  1 |  1  |  0  |     |  0  |  0  |
+|  0 |  0 |  1  |  1  |     |  1  |  1  |
+|  0 |  1 |  1  |  1  |     |  0  |  1  |
+|  1 |  0 |  1  |  1  |     |  1  |  1  |
+|  1 |  1 |  1  |  1  |     |  0  |  1  |
 
 Imagine starting in state `00` (so both `o18` and `o17` at 0), and setting the two inputs `i1` and `i2` at 0.
 Following the truth table you will see that You'll immediately switch to state `10` (`o18` high, and `o17` low),
