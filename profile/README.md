@@ -57,3 +57,15 @@ but state `10` with input `00` is not stable: following the truth table again, w
 and we will stop here.
 
 State `10` is an intermediate state, and is not captured by sampling the outputs at a low frequency.
+
+## TODO
+
+In no particular order:
+
+- Extract IC loading code from dppeeper into a library, so it can be shared between other tools
+- Write a section of this document detailing various analysis paths dependant on the type of IC
+- Implement a way in firmware to have the client "describe" the structure of a combinatorial IC, and then transfer the content via e.g. XMODEM, to reduce the overhead
+- Implement a de-ambiguizer that takes a "peeper" toml defintion that has pins shared between I/O/Q/Clock and tries to understand their actual function, then outputs a non ambiguous TOML.
+- Implement an analyzer that uses a non-ambiguous TOML and tries to extract feedback states and registered states.
+- Implement a conversion from whatever the analyzer outputs to an espresso table.
+- Find a way to make espresso buildable under mingw
