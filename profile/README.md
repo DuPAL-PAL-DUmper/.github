@@ -18,6 +18,7 @@ Development is currently carried on on the dupico only, and the other incarnatio
 - [dppeeper](https://github.com/DuPAL-PAL-DUmper/dppeeper), tool for visual and interactive analysis of a PLD
 - [dupicolib](https://github.com/DuPAL-PAL-DUmper/dupicolib), library for hardware interfacing with the dupico board, required by the above projects
 - [dpdumperlib](https://github.com/DuPAL-PAL-DUmper/dpdumperlib), library with shared code used by the dpdumper and other projects
+- [espresso-logic](https://github.com/DuPAL-PAL-DUmper/espresso-logic), port of espresso that can be built using msys2/mingw
 
 ## Limitations
 
