@@ -63,7 +63,7 @@ State `10` is an intermediate state, and is not captured by sampling the outputs
 
 In no particular order:
 
-- Extract IC loading code from dppeeper into a library, so it can be shared between other tools
+- ~Extract IC loading code from dppeeper into a library, so it can be shared between other tools~
 - Write a section of this document detailing various analysis paths dependant on the type of IC
 - ~Implement a way in firmware to have the client "describe" the structure of a combinatorial IC, and then transfer the content via e.g. XMODEM, to reduce the overhead~
 - Implement a de-ambiguizer that takes a "peeper" toml defintion that has pins shared between I/O/Q/Clock and tries to understand their actual function, then outputs a non ambiguous TOML.
