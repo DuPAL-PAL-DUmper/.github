@@ -63,6 +63,7 @@ State `10` is an intermediate state, and is not captured by sampling the outputs
 
 In no particular order:
 
+- Add flag to enable byte-swapping (Big-Endian -> Little Endian) in dpdumper in case the data bus width is > 1B
 - ~Extract IC loading code from dppeeper into a library, so it can be shared between other tools~
 - Write a section of this document detailing various analysis paths dependant on the type of IC
 - ~Implement a way in firmware to have the client "describe" the structure of a combinatorial IC, and then transfer the content via e.g. XMODEM, to reduce the overhead~
